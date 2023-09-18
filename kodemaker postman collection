@@ -1,0 +1,382 @@
+{
+	"info": {
+		"_postman_id": "82bf2170-7871-4ea9-8fb2-06d349d2fe94",
+		"name": "kodemaker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User-register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "test",
+							"type": "default"
+						},
+						{
+							"key": "mobile_no",
+							"value": "1234567890",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "test@yopmail.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "default"
+						},
+						{
+							"key": "address",
+							"value": "testing purpose",
+							"type": "default"
+						},
+						{
+							"key": "is_active",
+							"value": "1",
+							"type": "default"
+						},
+						{
+							"key": "is_delete",
+							"value": "0",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/user-register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user-register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "test@yopmail.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4|rGQEJdVVQERpjhim7avWCmaPmE94NQ0C4FHXa9TJ28f20c36",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create-blog",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "6|rl9FfReTL6IW3rOda946g81VRL5s5tQwj5vTHO5J880c4a27",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "blog 3",
+							"type": "default"
+						},
+						{
+							"key": "description",
+							"value": "lorem ipsum is simply dummy text of the priniting and typesetting industry.",
+							"type": "default"
+						},
+						{
+							"key": "blog_image",
+							"type": "file",
+							"src": "/C:/Users/umeshbadgujar/Desktop/jeans/loose_jeans1.jpg"
+						},
+						{
+							"key": "page_description",
+							"value": "lorem ipsum is simply dummy text of the priniting and typesetting industry.",
+							"type": "default"
+						},
+						{
+							"key": "is_active",
+							"value": "1",
+							"type": "default"
+						},
+						{
+							"key": "is_delete",
+							"value": "0",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/create-blog",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"create-blog"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update-blog",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "6|rl9FfReTL6IW3rOda946g81VRL5s5tQwj5vTHO5J880c4a27",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "blog 3 test",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "lorem ipsum is simply dummy text of the priniting and typesetting industry.",
+							"type": "text"
+						},
+						{
+							"key": "page_description",
+							"value": "lorem ipsum is simply dummy text of the priniting and typesetting industry.",
+							"type": "text"
+						},
+						{
+							"key": "is_active",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "is_delete",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "blog_image",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/update-blog",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"update-blog"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-blog-list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/get-blog-list?limit=10&page=0&sort=id&order=desc&search=test&like=most",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"get-blog-list"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "sort",
+							"value": "id"
+						},
+						{
+							"key": "order",
+							"value": "desc"
+						},
+						{
+							"key": "search",
+							"value": "test"
+						},
+						{
+							"key": "like",
+							"value": "most"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Like API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "6|rl9FfReTL6IW3rOda946g81VRL5s5tQwj5vTHO5J880c4a27",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/blog-like?blog_id=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"blog-like"
+					],
+					"query": [
+						{
+							"key": "blog_id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get single blog",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "6|rl9FfReTL6IW3rOda946g81VRL5s5tQwj5vTHO5J880c4a27",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/get-single-blog/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"get-single-blog",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
